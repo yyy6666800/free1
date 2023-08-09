@@ -9,11 +9,11 @@ RUN echo 'Wanwusheng4000@' | vncpasswd -f > $HOME/.vnc/passwd
 RUN echo '/bin/env  MOZ_FAKE_NO_SANDBOX=1  dbus-launch xfce4-session'  > $HOME/.vnc/xstartup
 RUN chmod 600 $HOME/.vnc/passwd
 RUN chmod 755 $HOME/.vnc/xstartup
-RUN echo 'whoami ' >>/luo.sh
-RUN echo 'cd ' >>/luo.sh
-RUN echo "su -l -c 'vncserver :2000 -geometry 1360x768' "  >>/luo.sh
-RUN echo 'cd /noVNC-1.2.0' >>/luo.sh
-RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/luo.sh
-RUN chmod 755 /luo.sh
+RUN echo 'whoami ' >>/Wanwusheng4000@.sh
+RUN echo 'cd ' >>/Wanwusheng4000@.sh
+RUN echo "su -l -c 'vncserver :2000 -geometry 1360x768' "  >>/Wanwusheng4000@.sh
+RUN echo 'cd /noVNC-1.2.0' >>/Wanwusheng4000@.sh
+RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/Wanwusheng4000@.sh
+RUN chmod 755 /Wanwusheng4000@.sh
 EXPOSE 8900
-CMD  /luo.sh 
+CMD  /Wanwusheng4000@.sh 
